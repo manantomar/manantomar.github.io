@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "Hank Quinlan, Horrible Cop, Launches Site"
+title: Successor Representation and Eigen Options
 date: 2014-04-30
 ---
-
-## Successor Representation and Eigen Options
 
 #### PROTO VALUE FUNCTIONS :
 
