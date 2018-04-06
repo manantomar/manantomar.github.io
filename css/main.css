@@ -1,7 +1,7 @@
 body {
     background: $white;
-    font: 18px/1.4 $helvetica;
-    color: $darkGray;
+    font: 18px/1.4 $open-sans;
+    color: #424242;
     margin: 60px auto;
     width: 70%;
 }
