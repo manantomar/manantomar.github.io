@@ -23,8 +23,8 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
-    font-family: monospace;
+    font-size: 2.5em;
+    font-family: monospace, sans-serif, lucida-sans;
 }
 p {
     font-family: ubuntu, sans-serif;
