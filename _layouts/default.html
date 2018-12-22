@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			{% if site.google_analytics and jekyll.environment == 'production' %}
+			{% include analytics.html %}
+			{% endif %}
 			<script type="text/x-mathjax-config">
 				MathJax.Hub.Config({
 					tex2jax: {
