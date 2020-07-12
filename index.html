@@ -60,6 +60,29 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+				<tr>
+			<td style="padding:20px;width:25%;vertical-align:middle;max-width:40%">
+				<!-- <img src="" alt="clean-usnob" width="160" height="100"> -->
+			</td>
+			<td style="padding:20px;width:75%;vertical-align:middle">
+				<a href="https://arxiv.org/abs/2005.09814.pdf">
+				<papertitle>Mirror Descent Policy Optimization</papertitle>
+				</a>
+				<br>
+				<strong>Manan Tomar</strong>, <a href="">Lior Shani</a>, <a href="">Yonathan Efroni</a>, <a href="">Mohammad Ghavamzadeh</a>
+				<br>
+				<em>Pre-print. Under review.</em>
+				<p>We propose deep Reinforcement Learning (RL) algorithms inspired by mirror descent, a well-known first-order trust region 
+					optimization method for solving constrained convex problems. Our approach, which we call as Mirror Descent Policy Optimization (MDPO), 
+					is based on the idea of iteratively solving a `trust-region' problem that minimizes a sum of two terms: a linearization of the objective 
+					function and a proximity term that restricts two consecutive updates to be close to each other. Following this approach we derive on-policy
+					 and off-policy variants of the MDPO algorithm and analyze their performance while emphasizing important implementation details, motivated by
+					the existing theoretical framework. We highlight the connections between on-policy MDPO and two popular trust region RL algorithms: TRPO and PPO, 
+					and conduct a comprehensive empirical comparison of these algorithms. We then derive off-policy MDPO and compare its performance to existing approaches. 
+					Importantly, we show that the theoretical framework of MDPO can be scaled to deep RL while achieving good performance on popular benchmarks.</p>
+			</td>
+			</tr>
+
 					<tr>
             <td style="padding:20px;width:25%;vertical-align:middle;max-width:40%">
               <!-- <img src="" alt="clean-usnob" width="160" height="100"> -->
@@ -71,7 +94,7 @@
               <br>
               <strong>Manan Tomar*</strong>, <a href="">Yonathan Efroni*</a>, <a href="">Mohammad Ghavamzadeh</a>
               <br>
-              <em>Under Review at the International Conference on Learning Representations</em>, ICLR 2020
+              <em>Accepted at the International Conference on Machine Learning</em>, ICML 2020
               <p>We explore the benefits of multi-step greedy policies in model-free RL when employed in the framework
 								of multi-step Dynamic Programming (DP): multi-step Policy and Value Iteration. These algorithms
 								iteratively solve short-horizon decision problems and converge to the optimal solution of the original
