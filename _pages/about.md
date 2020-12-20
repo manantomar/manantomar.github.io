@@ -8,5 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an AI resident at [Facebook AI Research](https://ai.facebook.com/) Menlo Park, working in Reinforcement Learning under [Mohammad Ghavamzadeh](https://chercheurs.lille.inria.fr/~ghavamza/my_website/About_Me.html). Previously I was at IIT Madras, where I was advised by Prof. [Balaraman Ravindran](https://www.cse.iitm.ac.in/~ravi/).
+I am a first year PhD candidate at the University of Alberta, working in Reinforcement Learning. I am fortunate to be advised by [Prof. Matthew E. Taylor](https://drmatttaylor.net/) at the UofA. Previously, I was an AI resident at [Facebook AI Research](https://ai.facebook.com/) Menlo Park, where I got the chance to work with [Dr. Mohammad Ghavamzadeh](https://mohammadghavamzadeh.github.io/). Even before, I was an undergraduate at IIT Madras, where I got introduced to RL research by Prof. [Balaraman Ravindran](https://www.cse.iitm.ac.in/~ravi/).
+
+Currently, I am most interested in representation learning for RL, both in terms of abstraction and generalization theory, and in terms of the deep learning architectures surrounding the topic.
  
