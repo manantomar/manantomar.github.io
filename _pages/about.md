@@ -12,3 +12,4 @@ I am a first year PhD candidate at the University of Alberta, working in Reinfor
 
 Currently, I am most interested in representation learning for RL, both in terms of abstraction and generalization theory, and in terms of the deep learning architectures surrounding the topic.
  
+Contact me at <em> my first name dot last name at gmail dot com </em>

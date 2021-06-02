@@ -15,7 +15,9 @@ author_profile: true
   {% include archive-single.html %}
 {% endfor %}
 
-[Mirror Descent Policy Optimization](https://arxiv.org/abs/2005.09814.pdf). Manan Tomar, Lior Shani, Yonathan Efroni, Mohammad Ghavamzadeh. <em>Pre-print. Under review.</em>
+[Model-Invariant State Abstractions for Model-based Reinforcement Learning](https://arxiv.org/pdf/2102.09850.pdf). Manan Tomar, Amy Zhang, Roberto Calandra, Matthew E. Taylor, Joelle Pineau. <em>Pre-print. Accepted at the SSL4RL workshop at ICLR 2021.</em>
+
+[Mirror Descent Policy Optimization](https://arxiv.org/abs/2005.09814.pdf). Manan Tomar, Lior Shani, Yonathan Efroni, Mohammad Ghavamzadeh. <em>Pre-print. Accepted as a contributed talk at the DeepRL NeurIPS 2020 workshop.</em>
 
 [Multi-step Greedy Reinforcement Learning Algorithms](https://arxiv.org/abs/1910.02919.pdf). Manan Tomar\*, Yonathan Efroni\*, Mohammad Ghavamzadeh. <em>Accepted at the International Conference on Machine Learning</em>, ICML 2020.
 
