@@ -22,6 +22,12 @@ Contact me at <em> my first name dot last name at gmail dot com </em>
 
 # Research  
 
+[Ignorance is Bliss: Robust Control via Information Gating](https://arxiv.org/abs/2303.06121). **Manan Tomar**, Riashat Islam, Sergey Levine, Philip Bachman. Pre-print.
+
+[Agent-Controller Representations: Principled Offline RL with Rich Exogenous Information](https://arxiv.org/abs/2211.00164). Riashat Islam\*, **Manan Tomar**\*, Alex Lamb, Yonathan Efroni, Hongyu Zang, Aniket Didolkar, Dipendra Misra, Xin Li, Harm van Seijen, Remi Tachet des Combes, John Langford. Offline RL Workshop at NeurIPS 2022.
+
+[Representation Learning in Deep RL via Discrete Information Bottleneck](https://arxiv.org/abs/2212.13835). Riashat Islam, Hongyu Zang, **Manan Tomar**, Aniket Didolkar, Md Mofijul Islam, Samin Yeasar Arnob, Tariq Iqbal, Xin Li, Anirudh Goyal, Nicolas Heess, Alex Lamb. AISTATS 2023.
+
 [Learning Minimal Representations with Model Invariance](https://openreview.net/pdf?id=v3LXWP63qOZ). **Manan Tomar**, Amy Zhang, Matthew E. Taylor. Pre-print.
 
 [Learning Representations for Pixel-based Control: What Matters and Why?](https://arxiv.org/pdf/2111.07775.pdf). **Manan Tomar**\*, Utkarsh A. Mishra\*, Amy Zhang, Matthew E. Taylor. Pre-print; RLDM 2022.
