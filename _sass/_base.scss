@@ -5,6 +5,7 @@ html {
   /* sticky footer fix */
   position: relative;
   min-height: 100%;
+  text-align: justify;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   padding: 0;
   padding-bottom: 9em;
   color: $text-color;
+  font-size: 0.9em;
   font-family: $global-font-family;
   line-height: 1.5;
 
