@@ -30,7 +30,7 @@ Contact me at <em> my first name dot last name at gmail dot com </em>
 
 [Learning Minimal Representations with Model Invariance](https://openreview.net/pdf?id=v3LXWP63qOZ). **Manan Tomar**, Amy Zhang, Matthew E. Taylor. Pre-print.
 
-[Learning Representations for Pixel-based Control: What Matters and Why?](https://arxiv.org/pdf/2111.07775.pdf). **Manan Tomar**\*, Utkarsh A. Mishra\*, Amy Zhang, Matthew E. Taylor. Pre-print; RLDM 2022.
+[Learning Representations for Pixel-based Control: What Matters and Why?](https://arxiv.org/pdf/2111.07775.pdf). **Manan Tomar**\*, Utkarsh A. Mishra\*, Amy Zhang, Matthew E. Taylor. TMLR 2022.
 
 [Model-Invariant State Abstractions for Model-based Reinforcement Learning](https://arxiv.org/pdf/2102.09850.pdf). **Manan Tomar**, Amy Zhang, Roberto Calandra, Matthew E. Taylor, Joelle Pineau. Pre-print; Spotlight at Sparsity in Neural Networks workshop.
 
