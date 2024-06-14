@@ -29,7 +29,7 @@ Contact me at <em> my first name dot last name at gmail dot com </em>
 
 [Reward Centering](https://arxiv.org/abs/2405.09999). Abhishek Naik, Yi Wan, **Manan Tomar**, Rich Sutton. Reinforcement Learning Conference (RLC) 2024.
 
-[Robotic Offline RL from Internet Videos via Value-Function Pre-Training](https://arxiv.org/pdf/2309.13041). Chethan Bhateja\*, Derek Guo\*, Dibya Ghosh\*, Anikait Singh, **Manan Tomar**, Quan Vuong, Yevgen Chebotar, Sergey Levine, Aviral Kumar. ICRA. 2024.
+[Robotic Offline RL from Internet Videos via Value-Function Pre-Training](https://arxiv.org/pdf/2309.13041). Chethan Bhateja\*, Derek Guo\*, Dibya Ghosh\*, Anikait Singh, **Manan Tomar**, Quan Vuong, Yevgen Chebotar, Sergey Levine, Aviral Kumar. ICRA, 2024.
 
 [Video-Guided Skill Discovery](https://openreview.net/pdf?id=lF3eFxpfSq). **Manan Tomar**\*, Dibya Ghosh\*, Vivek Myers\*, Anca Dragan, Matthew E Taylor, Philip Bachman, Sergey Levine. ICML Workshop on The Many Facets of Preference-Based Learning, 2023.
 
