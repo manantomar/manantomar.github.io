@@ -23,9 +23,9 @@ Contact me at <em> my first name dot last name at gmail dot com </em>
 
 # Research  
 
-[Unified Auto-encoding with Masked Diffusion](). Philippe Hansen-Estruch, Sriram Vishwanath, Amy Zhang, **Manan Tomar**. In Submission to NeurIPS, Arxiv, 2024.
+[Unified Auto-encoding with Masked Diffusion](https://arxiv.org/abs/2406.17688). Philippe Hansen-Estruch, Sriram Vishwanath, Amy Zhang, **Manan Tomar**. In Submission to NeurIPS, Arxiv, 2024.
 
-[Video Occupancy Models](). **Manan Tomar**, Philippe Hansen-Estruch, Philip Bachman, Alex Lamb, John Langford, Matthew E Taylor, Sergey Levine. In Submission to NeurIPS, Arxiv, 2024.
+[Video Occupancy Models](https://arxiv.org/abs/2407.09533). **Manan Tomar**, Philippe Hansen-Estruch, Philip Bachman, Alex Lamb, John Langford, Matthew E Taylor, Sergey Levine. In Submission to NeurIPS, Arxiv, 2024.
 
 [Reward Centering](https://arxiv.org/abs/2405.09999). Abhishek Naik, Yi Wan, **Manan Tomar**, Rich Sutton. Reinforcement Learning Conference (RLC) 2024.
 
