@@ -1,0 +1,204 @@
+- title: "Unified Auto-encoding with Masked Diffusion"
+  authors:
+    - "Philippe Hansen-Estruch"
+    - "Sriram Vishwanath"
+    - "Amy Zhang"
+    - "Manan Tomar"
+  venue: "NeurIPS 2024"
+  type: "In Submission"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2406.17688"
+
+- title: "Video Occupancy Models"
+  authors:
+    - "Manan Tomar"
+    - "Philippe Hansen-Estruch"
+    - "Philip Bachman"
+    - "Alex Lamb"
+    - "John Langford"
+    - "Matthew E Taylor"
+    - "Sergey Levine"
+  venue: "NeurIPS 2024"
+  type: "In Submission"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2407.09533"
+
+- title: "Reward Centering"
+  authors:
+    - "Abhishek Naik"
+    - "Yi Wan"
+    - "Manan Tomar"
+    - "Rich Sutton"
+  venue: "RLC 2024"
+  type: "Conference"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2405.09999"
+
+- title: "Robotic Offline RL from Internet Videos via Value-Function Pre-Training"
+  authors:
+    - "Chethan Bhateja*"
+    - "Derek Guo*"
+    - "Dibya Ghosh*"
+    - "Anikait Singh"
+    - "Manan Tomar"
+    - "Quan Vuong"
+    - "Yevgen Chebotar"
+    - "Sergey Levine"
+    - "Aviral Kumar"
+  venue: "ICRA 2024"
+  type: "Conference"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/pdf/2309.13041"
+
+- title: "Video-Guided Skill Discovery"
+  authors:
+    - "Manan Tomar*"
+    - "Dibya Ghosh*"
+    - "Vivek Myers*"
+    - "Anca Dragan"
+    - "Matthew E Taylor"
+    - "Philip Bachman"
+    - "Sergey Levine"
+  venue: "ICML Workshop on The Many Facets of Preference-Based Learning, 2023"
+  type: "Workshop"
+  links:
+    - name: "pdf"
+      url: "https://openreview.net/pdf?id=lF3eFxpfSq"
+
+- title: "Ignorance is Bliss: Robust Control via Information Gating"
+  authors:
+    - "Manan Tomar"
+    - "Riashat Islam"
+    - "Matthew E. Taylor"
+    - "Sergey Levine"
+    - "Philip Bachman"
+  venue: "NeurIPS 2023"
+  type: "Conference"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2303.06121"
+
+- title: "Agent-Controller Representations: Principled Offline RL with Rich Exogenous Information"
+  authors:
+    - "Riashat Islam*"
+    - "Manan Tomar*"
+    - "Alex Lamb"
+    - "Yonathan Efroni"
+    - "Hongyu Zang"
+    - "Aniket Didolkar"
+    - "Dipendra Misra"
+    - "Xin Li"
+    - "Harm van Seijen"
+    - "Remi Tachet des Combes"
+    - "John Langford"
+  venue: "ICML 2023"
+  type: "Conference"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2211.00164"
+
+- title: "Representation Learning in Deep RL via Discrete Information Bottleneck"
+  authors:
+    - "Riashat Islam"
+    - "Hongyu Zang"
+    - "Manan Tomar"
+    - "Aniket Didolkar"
+    - "Md Mofijul Islam"
+    - "Samin Yeasar Arnob"
+    - "Tariq Iqbal"
+    - "Xin Li"
+    - "Anirudh Goyal"
+    - "Nicolas Heess"
+    - "Alex Lamb"
+  venue: "AISTATS 2023"
+  type: "Conference"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2212.13835"
+
+- title: "Learning Representations for Pixel-based Control: What Matters and Why?"
+  authors:
+    - "Manan Tomar*"
+    - "Utkarsh A. Mishra*"
+    - "Amy Zhang"
+    - "Matthew E. Taylor"
+  venue: "TMLR 2022"
+  type: "Journal"
+  links:
+    - name: "pdf"
+      url: "https://arxiv.org/pdf/2111.07775.pdf"
+
+- title: "Learning Minimal Representations with Model Invariance"
+  authors:
+    - "Manan Tomar"
+    - "Amy Zhang"
+    - "Matthew E. Taylor"
+  venue: "2021"
+  type: "Pre-print"
+  links:
+    - name: "pdf"
+      url: "https://openreview.net/pdf?id=v3LXWP63qOZ"
+
+- title: "Model-Invariant State Abstractions for Model-based Reinforcement Learning"
+  authors:
+    - "Manan Tomar"
+    - "Amy Zhang"
+    - "Roberto Calandra"
+    - "Matthew E. Taylor"
+    - "Joelle Pineau"
+  venue: "Sparsity in Neural Networks workshop, 2021"
+  type: "Workshop"
+  note: "Spotlight"
+  links:
+    - name: "pdf"
+      url: "https://arxiv.org/pdf/2102.09850.pdf"
+
+- title: "Mirror Descent Policy Optimization"
+  authors:
+    - "Manan Tomar"
+    - "Lior Shani"
+    - "Yonathan Efroni"
+    - "Mohammad Ghavamzadeh"
+  venue: "ICLR 2022"
+  type: "Conference"
+  note: "Contributed talk at DeepRL NeurIPS 2020 workshop"
+  links:
+    - name: "pdf"
+      url: "https://arxiv.org/abs/2005.09814.pdf"
+
+- title: "Multi-step Greedy Reinforcement Learning Algorithms"
+  authors:
+    - "Manan Tomar*"
+    - "Yonathan Efroni*"
+    - "Mohammad Ghavamzadeh"
+  venue: "ICML 2020"
+  type: "Conference"
+  links:
+    - name: "pdf"
+      url: "https://arxiv.org/abs/1910.02919.pdf"
+
+- title: "Successor Options: An Option Discovery Algorithm for Reinforcement Learning"
+  authors:
+    - "Rahul Ramesh*"
+    - "Manan Tomar*"
+    - "Balaraman Ravindran"
+  venue: "IJCAI 2019"
+  type: "Conference"
+  links:
+    - name: "pdf"
+      url: "https://arxiv.org/pdf/1905.05731.pdf"
+
+- title: "MaMiC: Macro and Micro Curriculum for Robotic Reinforcement Learning"
+  authors:
+    - "Manan Tomar"
+    - "Akhil Sathuluri"
+    - "Balaraman Ravindran"
+  venue: "AAMAS 2019"
+  type: "Conference"
+  links:
+    - name: "pdf"
+      url: "https://arxiv.org/pdf/1905.07193.pdf"

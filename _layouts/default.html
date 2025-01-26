@@ -1,24 +1,67 @@
----
-layout: compress
----
-
-{% include base_path %}
-
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
-
-  <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
-    {{ content }}
-
-    {% include scripts.html %}
-
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Manan Tomar</title>
+    <link href="{{ '/assets/css/main.css' | relative_url}}" rel="stylesheet">
+    <link href="{{ '/assets/css/syntax.css' | relative_url }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    {% if site.google_analytics %}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+    
+    <!-- MathJax Support -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- MathJax configuration -->
+    <script>
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+          },
+          options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+        };
+      </script>
+    
+</head>
+<body class="bg-stone-100 text-gray-900 font-mono min-h-screen flex flex-col">
+  <header class="bg-stone-200 shadow-sm">
+      <div class="max-w-4xl mx-auto px-4 py-6">
+          <h1 class="text-3xl">Manan Tomar</h1>
+          <nav class="mt-4">
+              <ul class="flex space-x-6">
+                  <li><a href="/" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a></li>
+                  <li><a href="/research" class="text-gray-600 hover:text-blue-600 transition duration-300">Research</a></li>
+                  <li><a href="/blog" class="text-gray-600 hover:text-blue-600 transition duration-300">Blog</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-grow">
+      {{ content }}
+  </main>
+  
+  <footer class="bg-stone-200 mt-12 py-8">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+          <div class="flex justify-center space-x-6 mb-4">
+              {% include social-icons.html %}
+          </div>
+          <p class="text-gray-600">&copy; {{ 'now' | date: "%Y" }} William Brown. All rights reserved.</p>
+      </div>
+  </footer>
+</body>
 </html>
