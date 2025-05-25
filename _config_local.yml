@@ -3,9 +3,6 @@ include: [CNAME]
 baseurl: ''
 title: 'Manan Tomar'
 
-exclude:
-  - vendor
-
 plugins:
   - jekyll-postcss
 

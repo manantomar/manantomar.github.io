@@ -4,8 +4,19 @@ baseurl: ''
 title: 'Manan Tomar'
 
 # No jekyll-postcss here for CI
-plugins:
-  - jekyll-postcss
+plugins: []
+
+exclude:
+  - vendor
+  - node_modules
+  - .jekyll-cache
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
+  - yarn.lock
 
 markdown: kramdown
 kramdown:
