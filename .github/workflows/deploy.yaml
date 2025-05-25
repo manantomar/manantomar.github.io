@@ -31,21 +31,17 @@ jobs:
       - name: Add Linux platform to Gemfile.lock
         run: bundle lock --add-platform x86_64-linux
 
-      - name: Install Ruby gems
-        run: bundle install
-
-      - name: Build Jekyll site without jekyll-postcss
-        run: bundle exec jekyll build --source . --config _config.yml
-
-      - name: Run PostCSS manually on built CSS
-        run: npx postcss _site/assets/css/main.css -o _site/assets/css/main.css
+      - name: Build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
 
       - name: Add .nojekyll file
         run: touch _site/.nojekyll
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./_site
-          publish_branch: gh-pages
+          force_orphan: true
