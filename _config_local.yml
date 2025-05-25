@@ -3,8 +3,8 @@ include: [CNAME]
 baseurl: ''
 title: 'Manan Tomar'
 
-# No jekyll-postcss here for CI
-plugins: []
+plugins:
+  - jekyll-postcss
 
 markdown: kramdown
 kramdown:
@@ -13,6 +13,7 @@ kramdown:
   hard_wrap: false
   auto_ids: true
   toc_levels: 1..3
+
 social:
   twitter: manan_tomar
   linkedin: manan-tomar-615653119

@@ -1,36 +1,50 @@
+name: Build and Deploy Jekyll with TailwindCSS
+
 on:
   push:
     branches:
-      - master  # <-- make sure this matches your repo default branch
+      - master  # or your default branch
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - uses: ruby/setup-ruby@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: true
 
-      - uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
 
-      - run: npm install
+      - name: Install npm dependencies
+        run: npm install
 
-      - run: bundle lock --add-platform x86_64-linux
+      - name: Add Linux platform to Gemfile.lock
+        run: bundle lock --add-platform x86_64-linux
 
-      - run: bundle install
+      - name: Install Ruby gems
+        run: bundle install
 
-      - run: |
-          bundle exec jekyll build
-          touch _site/.nojekyll
+      - name: Build Jekyll site without jekyll-postcss
+        run: bundle exec jekyll build --config _config.yml
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Run PostCSS manually on built CSS
+        run: npx postcss _site/assets/css/main.css -o _site/assets/css/main.css
+
+      - name: Add .nojekyll file
+        run: touch _site/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
