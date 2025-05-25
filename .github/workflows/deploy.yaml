@@ -35,7 +35,7 @@ jobs:
         run: bundle install
 
       - name: Build Jekyll site without jekyll-postcss
-        run: bundle exec jekyll build --config _config.yml
+        run: bundle exec jekyll build --source . --config _config.yml
 
       - name: Run PostCSS manually on built CSS
         run: npx postcss _site/assets/css/main.css -o _site/assets/css/main.css
