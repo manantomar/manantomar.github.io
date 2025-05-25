@@ -3,11 +3,8 @@ include: [CNAME]
 baseurl: ''
 title: 'Manan Tomar'
 
-# # No jekyll-postcss here for CI
-# plugins: []
-
-plugins:
-  - jekyll-postcss
+# No jekyll-postcss here for CI
+plugins: []
 
 exclude:
   - vendor

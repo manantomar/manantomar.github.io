@@ -38,11 +38,11 @@ jobs:
       - name: Build Jekyll site without jekyll-postcss
         run: bundle exec jekyll build --config _config.yml
 
-      # - name: Run PostCSS manually on built CSS
-      #   run: npx postcss _site/assets/css/main.css -o _site/assets/css/main.css
+      - name: Run PostCSS manually on built CSS
+        run: npx postcss assets/css/main.css -o _site/assets/css/main.css
 
-      # - name: Add .nojekyll file
-      #   run: touch _site/.nojekyll
+      - name: Add .nojekyll file
+        run: touch _site/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
