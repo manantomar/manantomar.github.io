@@ -1,11 +1,28 @@
+- title: "Learning to Achieve Goals with Belief State Transformers"
+  authors:
+    - "Edward S Hu"
+    - "Kwangjun Ahn"
+    - "Qinghua Liu"
+    - "Haoran Xu"
+    - "Manan Tomar"
+    - "Ada Langford"
+    - "Dinesh Jayaraman"
+    - "Alex Lamb"
+    - "John Langford"
+  venue: "ICLR 2025"
+  type: "Conference"
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/pdf/2410.23506"
+
 - title: "Unified Auto-encoding with Masked Diffusion"
   authors:
     - "Philippe Hansen-Estruch"
     - "Sriram Vishwanath"
     - "Amy Zhang"
     - "Manan Tomar"
-  venue: "NeurIPS 2024"
-  type: "In Submission"
+  venue: "2024"
+  type: "Pre-print"
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2406.17688"
@@ -19,8 +36,8 @@
     - "John Langford"
     - "Matthew E Taylor"
     - "Sergey Levine"
-  venue: "NeurIPS 2024"
-  type: "In Submission"
+  venue: "2024"
+  type: "Pre-print"
   links:
     - name: "arXiv"
       url: "https://arxiv.org/abs/2407.09533"
@@ -129,7 +146,7 @@
   venue: "TMLR 2022"
   type: "Journal"
   links:
-    - name: "pdf"
+    - name: "arXiv"
       url: "https://arxiv.org/pdf/2111.07775.pdf"
 
 - title: "Learning Minimal Representations with Model Invariance"
@@ -154,7 +171,7 @@
   type: "Workshop"
   note: "Spotlight"
   links:
-    - name: "pdf"
+    - name: "arXiv"
       url: "https://arxiv.org/pdf/2102.09850.pdf"
 
 - title: "Mirror Descent Policy Optimization"
@@ -167,7 +184,7 @@
   type: "Conference"
   note: "Contributed talk at DeepRL NeurIPS 2020 workshop"
   links:
-    - name: "pdf"
+    - name: "arXiv"
       url: "https://arxiv.org/abs/2005.09814.pdf"
 
 - title: "Multi-step Greedy Reinforcement Learning Algorithms"
@@ -178,7 +195,7 @@
   venue: "ICML 2020"
   type: "Conference"
   links:
-    - name: "pdf"
+    - name: "arXiv"
       url: "https://arxiv.org/abs/1910.02919.pdf"
 
 - title: "Successor Options: An Option Discovery Algorithm for Reinforcement Learning"
@@ -189,7 +206,7 @@
   venue: "IJCAI 2019"
   type: "Conference"
   links:
-    - name: "pdf"
+    - name: "arXiv"
       url: "https://arxiv.org/pdf/1905.05731.pdf"
 
 - title: "MaMiC: Macro and Micro Curriculum for Robotic Reinforcement Learning"
@@ -200,5 +217,5 @@
   venue: "AAMAS 2019"
   type: "Conference"
   links:
-    - name: "pdf"
+    - name: "arXiv"
       url: "https://arxiv.org/pdf/1905.07193.pdf"
