@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror Descent Policy Optimization (MDPO) - Manan Tomar</title>
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V96LWF8C33"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V96LWF8C33');
+    </script>
+    
+    
+    <!-- MathJax Support -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- MathJax configuration -->
+    <script>
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+          },
+          options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+        };
+      </script>
+    
+</head>
+<body class="bg-stone-100 text-gray-900 font-palatino min-h-screen flex flex-col" style="font-family: 'Palatino'">
+  <header class="bg-stone-200 shadow-sm">
+      <div class="max-w-4xl mx-auto px-4 py-6">
+          <h1 class="text-3xl">Manan Tomar</h1>
+          <nav class="mt-4">
+              <ul class="flex space-x-6">
+                  <li><a href="/" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a></li>
+                  <li><a href="/research" class="text-gray-600 hover:text-blue-600 transition duration-300">Research</a></li>
+                  <li><a href="/blog" class="text-gray-600 hover:text-blue-600 transition duration-300">Blog</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-grow">
+      <div class="max-w-3xl mx-auto px-4 py-8">
+  <h1 class="text-2xl font-semibold mb-2">Mirror Descent Policy Optimization (MDPO)</h1>
+
+  
+
+  <article class="prose lg:prose-xl">
+  <p class="text-sm text-gray-600 mb-4">November 07, 2020</p>
+  <body style="font-family: 'Palatino'">
+
+<p style="text-align:justify">
+Reinforcement Learning (RL) approaches can be broadly casted in three categories--- <b>value</b> based, <b>model</b> based, and <b>policy</b> based. Value based methods tend to model the optimal value function and then extract the optimal policy. Model based methods try to learn the model (transition and reward dynamics) and then extract the optimal policy using planning techniques. Intead, policy based methods try to learn the optimal policy by directly optimizing the objective funtion of inerest, i.e. the expected discounted return. Trus-region based policy optimization methods fall under this third category and includes popular off-the-shelf RL methods such as TRPO [1], PPO [3], and SAC [2]. The general idea in trust-region methods is to keep the policy updates close to each other, which results in more stable learning.
+</p>
+
+<h2> Mirror Descent </h2>
+<p style="text-align:justify">
+Mirror Descent (MD) is a first order trust-region method for constrained convex optimization. 
+</p>
+<p align="center">
+$x^* \in \arg\!\min_{x\in C} \; f(x)$  
+</p>
+
+<p style="text-align:justify">
+MD offers the following iterative update rule for the above problem: 
+</p>
+
+<p align="center">
+$x_{k+1} \in \arg\!\min_{x \in C} \; \langle \nabla f(x_{k}), x - x_{k} \rangle + \frac{1}{t_k} B_{\psi}(x, x_k)$
+</p>
+
+<h2> Mirror Descent in RL </h2>
+
+<p style="text-align:justify">
+Applying the MD update to the RL objective results in having to solve an optimization problem at each iteration $k$. We test a simple solution to this--- solving the optimization problem approximately using multiple steps of SGD. In doing so, we can derive on-policy and off-policy versions based on how we wish to sample data:  
+</p>
+
+<h3> On-policy MDPO </h3>
+
+<p style="text-align:justify">
+On-policy MDPO tries to solve the following optimization problem at each iterate $k$, using multiple steps of SGD:
+</p>
+
+<p align="center">
+$\theta_{k+1} \leftarrow \arg\max_{\theta\in\Theta} \mathbb{E_{\color{red}{s\sim\rho_{\theta_k}}}}\Big[\mathbb{E_{a\sim\pi_\theta}}\big[A^{\theta_k}(s, a)\big] - \frac{1}{t_{k}}\text{KL}(s;\pi_\theta,\pi_{\theta_k})\Big]$
+</p>
+
+<h3> Off-policy MDPO </h3>
+
+<p style="text-align:justify">
+Off-policy MDPO tries to solve the following optimization problem at each iterate $k$, using multiple steps of SGD:
+</p>
+
+<p align="center">
+$\theta_{k+1} \leftarrow \arg\max_{\theta\in\Theta} \mathbb{E_{\color{red}{s\sim\mathcal{D}}}}\Big[\mathbb{E_{a\sim\pi_\theta}}\big[A^{\theta_k}(s, a)\big] - \frac{1}{t_{k}}\text{KL}(s;\pi_\theta,\pi_{\theta_k})\Big]$
+</p>
+
+<h2> Key Differences with TRPO </h2>
+
+<p style="text-align:justify">
+<ul>
+    <li>TRPO deploys a hard constraint on the policy update, through a line search routine. MDPO does not have a hard constraint.</li>
+    <li>TRPO performs natural gradient descent, thus computing the FIM at each step. MDPO performs simple SGD.</li>
+    <li>TRPO uses the opposite KL direction compared to MDPO.</li>
+    <li>TRPO uses heuristics for step size. MDPO uses a simple annealing schedule.</li>
+</ul>
+</p>
+
+<h2> Key Differences with PPO </h2>
+
+<p style="text-align:justify">
+<ul>
+    <li>PPO uses a clipping based objective, removing any dependence on the KL divergence.</li>
+    <li>PPO-KL is similar to MDPO but uses opposite KL direction/does not use multiple SGD steps. The adaptive version also uses heuristics for computing the step size.</li>
+</ul>
+</p>
+
+<h2> MDPO and SAC </h2>
+
+<p style="text-align:justify">
+Coming back to the off-policy version of MDPO, we see that after applying the reparameterization trick, the MDPO update closely resembles the SAC update:
+</p>
+
+<p align="center">
+$L^\text{MDPO}(\theta,\theta_k) = \mathbb{E_{s \sim \mathcal{D}, \epsilon \sim \mathcal{N}}} \big[\log \pi_\theta\big(\widetilde{a}_\theta(\epsilon,s)|s\big) - \log \pi_{\theta_k}\big(\widetilde{a}_\theta(\epsilon,s)|s\big) - t_k Q^{\theta_k}_\psi\big(s,\widetilde{a}_\theta(\epsilon,s)\big)\big]$
+</p>
+
+<p align="center">
+$L^\text{SAC}(\theta,\theta_k) = \mathbb{E_{s \sim \mathcal{D}, \epsilon \sim \mathcal{N}}} \big[\lambda \log \pi_{\theta}\big(\widetilde{a}_\theta (\epsilon, s)|s\big) - Q^{\theta_k}_\psi\big(s,\widetilde{a}_\theta(\epsilon, s)\big)\big]$
+</p>
+
+<h2> Key Differences with SAC </h2>
+
+<p style="text-align:justify">
+<ul>
+    <li>SAC constraints the current policy to be close to uniform policy. MDPO constraints it to be close to the previous step policy.</li>
+    <li>MDPO offers a new derivation to SAC, through a optimization perspective. SAC is originally derived from a ‘soft’ policy iteration perspective.</li>
+    <li>SAC argues that any projection can be used for it’s loss. MDPO shows that the projection must be the same as the choice of Bregman.</li>
+</ul>
+</p>
+
+<h2> Takeaways (on-policy) </h2>
+
+<p style="text-align:justify">
+<ul>
+    <li>MDPO performs better than or on par to TRPO and better than PPO.</li>
+    <li>MDPO reduces wall clock time, and is more efficient than TRPO.</li>
+    <li>TRPO is a better performing algorithm than PPO.</li>
+    <li>PPO is prone to instability issues, particularly when run for longer iterations.</li>
+</ul>
+</p>
+
+<h2> Takeaways (off-policy) </h2>
+
+<p style="text-align:justify">
+<ul>
+    <li>MDPO performs better than or on par with SAC.</li>
+    <li>Off-policy MDPO has a better sample efficiency than on-policy MDPO.</li>
+    <li>Off-policy MDPO has a much higher wall clock time than on-policy MDPO.</li>
+    <li>Regularized and un-regularized MDPO do not have a huge performance gap, similar to how SAC and it's deterministic variant do not as well.</li>
+</ul>
+</p>
+
+<h3> References </h3>
+<p style="text-align:justify">
+<ol>
+    <li style="font-size:14px"> Trust Region Policy Optimization. John Schulman, Sergey Levine, Philipp Moritz, Michael I. Jordan, Pieter Abbeel. ICML 2015.</li>
+    <li style="font-size:14px"> Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor. Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, Sergey Levine. ICML 2018.</li>
+    <li style="font-size:14px"> Proximal Policy Optimization Algorithms. John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov. Preprint 2017.</li>
+</ol>
+</p>
+</body>
+
+</article>
+
+  
+</div>
+  </main>
+  
+  <footer class="bg-stone-200 mt-12 py-8">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+          <div class="flex justify-center space-x-6 mb-4">
+              
+<a href="https://twitter.com/manan_tomar" target="_blank" rel="noopener noreferrer" class="text-gray-600">
+    <!-- <i class="fab fa-x-twitter fa-lg"></i> -->
+    <code>Twitter</code>
+</a>
+
+
+<span class="text-gray-600 text-lg">·</span>
+
+
+<a href="https://www.linkedin.com/in/manan-tomar-615653119" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">
+    <!-- <i class="fab fa-linkedin-in fa-lg"></i> -->
+    <code>Linkedin</code>
+</a>
+
+
+<span class="text-gray-600 text-lg">·</span>
+
+
+<a href="https://scholar.google.com/citations?user=kamjbL0AAAAJ" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">
+    <!-- <i class="fas fa-graduation-cap fa-lg"></i> -->
+    <code>G Scholar</code>
+</a>
+
+
+<span class="text-gray-600 text-lg">·</span>
+
+
+<a href="https://github.com/manantomar" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">
+    <!-- <i class="fab fa-github fa-lg"></i> -->
+    <code>GitHub</code>
+</a>
+
+
+<span class="text-gray-600 text-lg">·</span>
+
+
+<a href="mailto:manan.tomar@gmail.com" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">
+    <!-- <i class="fa fa-envelope fa-lg"></i> -->
+    <code>Email</code>
+</a>
+
+          </div>
+          <p class="text-gray-600">Adapted from <a href="https://willcb.com/" class="hover:text-blue-600 transition duration-300">William Brown</a>'s webpage</p>
+      </div>
+  </footer>
+</body>
+</html>
