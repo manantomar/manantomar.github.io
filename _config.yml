@@ -5,10 +5,6 @@ title: 'Manan Tomar'
 
 exclude:
   - vendor
-  - package.json
-  - postcss.config.js
-  - tailwind.config.js
-  - yarn.lock
 
 # No jekyll-postcss here for CI
 plugins: []
