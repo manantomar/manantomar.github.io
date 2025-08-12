@@ -591,6 +591,15 @@ video {
   color: rgb(30 64 175 / var(--tw-text-opacity));
   text-decoration-line: underline;
 }
+.collapse {
+  visibility: collapse;
+}
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -618,6 +627,9 @@ video {
 }
 .flex {
   display: flex;
+}
+.hidden {
+  display: none;
 }
 .min-h-screen {
   min-height: 100vh;
